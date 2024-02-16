@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "ts:check": "tsc",
-    "setup": "rm-rf node_modules && npm install"
+    "setup": "rm -rf node_modules && npm install"
   },
   "dependencies": {
     "expo": "~50.0.6",

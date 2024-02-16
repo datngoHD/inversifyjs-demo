@@ -1,7 +1,9 @@
 import "reflect-metadata";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
-import CounterViewController from "src/view-controllers/CounterViewController";
+import CounterViewController from "src/view-controllers/counter-view-controller";
+
+process.env.IOC = "alternate";
 
 export default function App() {
   return (

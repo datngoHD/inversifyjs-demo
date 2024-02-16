@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import CounterView from "src/views/CounterView";
+import CounterView from "src/views/counter-view";
 import container from "../inversify.config";
-import { CounterController } from "src/controllers/CounterController";
+import { CounterController } from "src/controllers/counter-controller";
 
 interface CounterViewControllerState {
   count: number;

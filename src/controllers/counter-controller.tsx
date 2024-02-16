@@ -1,5 +1,5 @@
 import { inject, injectable } from "inversify";
-import CounterModel from "../models/CounterModel";
+import CounterModel from "../models/counter-model";
 
 @injectable()
 export class CounterController {

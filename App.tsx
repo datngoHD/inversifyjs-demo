@@ -1,15 +1,18 @@
 import "reflect-metadata";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
-import CounterViewController from "src/view-controllers/counter-view-controller";
+import container from 'ioc';
+import TYPES from "src/constants/identifiers";
+import { Counter } from "src/features/counter";
 
 process.env.IOC = "alternate";
 
 export default function App() {
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <CounterViewController />
+      <Counter model={container.get(TYPES.MODEL)} controller={container.get(TYPES.CONTROLLER)} />
     </View>
   );
 }

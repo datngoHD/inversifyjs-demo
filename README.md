@@ -1,20 +1,15 @@
-bare
-====
+# Inversion of Control Demo App
 
-Make node.js frameworks scram - use bare
+## Setup
 
-A bare example:
+1. Install dependencies
 
-    'use strict';
-    var bare = require('bare')
-      , http = require('http');
+   `npm install`
 
-    bare.router.on('get', '/test', function(req, res) {
-      res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end('test\n');
-      console.log('test');
-    });
+2. Run app with **IOC=alternate** to use component in alternate configuration
 
-    http.createServer(function(req, res) {
-      bare.router.dispatch(req, res, console.log);
-    }).listen(8080);
+   `IOC=alternate npm start`
+
+   For default configuration, use `IOC=default npm start`
+
+3. Scan the QR code with Expo Go (Android) or the Camera app (iOS) to load app

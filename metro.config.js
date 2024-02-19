@@ -7,7 +7,7 @@ module.exports = {
   resolver: {
     resolveRequest: (context, moduleName, platform) => {
       if (moduleName === 'ioc') {
-        const ico = process.env.EXPO_PUBLIC_IOC;
+        const ico = process.env.IOC;
         return {
           filePath: path.resolve(__dirname, path.join('src', 'ioc', ico ?? 'default', 'index.ts')),
           type: 'sourceFile',

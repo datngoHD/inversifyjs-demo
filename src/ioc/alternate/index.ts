@@ -1,5 +1,5 @@
 import { inject, injectable, Container } from "inversify";
-import { Observable, Subject } from "rxjs";
+import { Observable, BehaviorSubject } from "rxjs";
 import SERVICE_IDENTIFIER from "src/constants/identifiers";
 import { CounterController, CounterModel } from "src/features/counter";
 
@@ -29,7 +29,7 @@ export class AlternateCounterController implements CounterController {
 
 @injectable()
 export class AlternateCounterModel implements CounterModel {
-  private counterSubject: Subject<number> = new Subject<number>();
+  private counterSubject: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   counter$: Observable<number> = this.counterSubject.asObservable();
 
   private counterValue: number = 0;
